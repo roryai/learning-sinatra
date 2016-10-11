@@ -1,3 +1,4 @@
+
 <div style='border: 3px dashed cyan'>
   <img src='http://i2.cdn.turner.com/cnnnext/dam/assets/150324154010-04-internet-cats-restricted-exlarge-169.jpg'>
 </div>
@@ -6,14 +7,10 @@
 <h1>My name is <%=@name%>!</h1>
 
 <% if @name == "" || @name == nil %>
-<form action="/named-cat">
+<form action="/named-cat" method="post">
   <div>
-    <!-- <label for="name">Name of cat:</label> -->
     <input type="text" name="name"/>
     <input type="submit" value="Submit"/>
   </div>
 </form>
 <% end %>
-
-<!-- if name is empty or nil, load form.
-if name has a value, do not laod form -->
